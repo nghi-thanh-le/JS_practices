@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Sample Test</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./bootstrap-3.3.5-dist/css/main.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div class="starter-template">
+        <h1>WD Code Sample</h1>
+        <p class="lead">An simple project using Javascript and Bootstrap</p>
+      </div>
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Task 1</a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="col-md-4">
+                      <fieldset>
+                        <legend>THE AGE CALCULATOR</legend>
+                        <form class="form-horizontal">
+                          <div class="form-group">
+                            <label class="col-md-4 control-label">Birth Year:</label>
+                            <div class="col-md-4">
+                              <input type="text" class="form-control" id="birth">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-md-4 control-label">Current Year:</label>
+                            <div class="col-md-4">
+                              <input type="text" class="form-control" id="current" placeholder="2015">
+                            </div>
+                          </div>
+                        </form>
+                        <button class="btn btn-primary center-block" onclick="calculateAge(birth, current)">Calculate Age</button>
+                      </fieldset>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4">
+                      <p class="lead">Result</p>
+                      <p class="text-danger" id="warning1"></p>
+                      <p id="result1"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Task 2</a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="col-md-4">
+                      <fieldset>
+                        <legend>THE LIFETIME SUPPLY CALCULATOR</legend>
+                        <form class="form-horizontal">
+                          <div class="form-group">
+                            <label class="col-md-4 control-label">Age:</label>
+                            <div class="col-md-4">
+                              <input type="text" class="form-control" id="age">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="col-md-4 control-label">Amount:</label>
+                            <div class="col-md-4">
+                              <input type="text" class="form-control" id="amount">
+                            </div>
+                          </div>
+                        </form>
+                        <button class="btn btn-primary center-block" onclick="calculateSupply(age, amount)">Calculate Supply</button>
+                      </fieldset>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4">
+                      <p class="lead">Result</p>
+                      <p class="text-danger" id="warning2"></p>
+                      <p id="result2"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Task 3</a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="col-md-4">
+                      <fieldset>
+                        <legend>THE GEOMETRIZER</legend>
+                        <form class="form-inline">
+                          <div class="form-group">
+                            <label>Radius:</label>
+                            <input type="text" class="form-control" id="radius">
+                            <p></p>
+                            <button class="btn btn-primary" type="button" onclick="calcCircumfrence(radius)">calcCircumfrence</button>
+                            <button class="btn btn-primary" type="button" onclick="calcArea(radius)">calcArea</button>
+                        </form>
+                      </fieldset>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4">
+                      <p class="lead">Result</p>
+                      <p class="text-danger" id="warning3"></p>
+                      <p id="cir"></p>
+                      <p id="area"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Task 4</a>
+                </h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <div class="col-md-6">
+                      <fieldset>
+                        <legend>THE TEMPERATURE CONVERTER</legend>
+                        <p>Celsius to Fahrenheit</p>
+                        <form class="form-inline">
+                          <div class="form-group">
+                            <label>Celsius:</label>
+                            <input type="text" class="form-control" id="cel">
+                            <button class="btn btn-primary" type="button" onclick="celsiusToFahrenheit(cel)">Convert</button>
+                          </div>
+                        </form>
+                        <br/>
+                        <p>Fahrenheit to Celsius</p>
+                        <form class="form-inline">
+                          <div class="form-group">
+                            <label>Fahrenheit:</label>
+                            <input type="text" class="form-control" id="fah">
+                          </div>
+                          <button class="btn btn-primary" type="button" onclick="fahrenheitToCelsius(fah)">Convert</button>
+                        </form>
+                      </fieldset>
+                    </div>
+                    <div class="col-md-4">
+                      <p class="lead">Result</p>
+                      <p class="text-danger" id="warning4"></p>
+                      <p id="convert1"></p>
+                      <p id="convert2"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="./bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./bootstrap-3.3.5-dist/js/task.js"></script>
+  </body>
+</html>

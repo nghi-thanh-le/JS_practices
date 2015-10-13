@@ -1,0 +1,19 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  padding-top: 30px;
+}
+
+.starter-template {
+  padding: 5px 10px;
+  text-align: center;
+}
+
+#task1, #task2 {
+    height: 100px;
+    padding: 10px;
+}
