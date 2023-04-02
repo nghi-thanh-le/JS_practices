@@ -1,4 +1,4 @@
-# WD_Sample
+# JS practices
 An simple task using javascript and bootstrap
 SAMPLE
 
